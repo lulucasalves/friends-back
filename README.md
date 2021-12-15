@@ -3,7 +3,7 @@
   Este projeto foi feito junto com a Rocketseat na trilha Node.js do evento
   NLW-6
 </p>
-<img src="" />
+<img src="https://github.com/lulucasalves/friends-api-back/blob/main/.github/img.png" />
 <h1>Tecnologias útilizadas</h1>
 <li><a href="https://www.typescriptlang.org/">Typescript</a></li>
 <li><a href="https://nodejs.org/">Node.js</a></li>
