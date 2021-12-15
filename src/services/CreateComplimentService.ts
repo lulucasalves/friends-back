@@ -16,14 +16,14 @@ class CreateComplimentService {
     user_receiver,
     message
   }: IComplimentRequest) {
-    const complimentsRepository = getCustomRepository(ComplimentsRepositories)
-    const usersRepository = getCustomRepository(UsersRepositories)
+    const complimentsRepositories = getCustomRepository(ComplimentsRepositories)
+    const usersRepositories = getCustomRepository(UsersRepositories)
 
     if (user_sender == user_receiver) {
       throw new Error('You cont send tag for same user')
     }
 
-    const userReceiverAlreadyExists = await usersRepository.findOne(
+    const userReceiverAlreadyExists = await usersRepositories.findOne(
       user_receiver
     )
 
@@ -31,7 +31,7 @@ class CreateComplimentService {
       throw new Error('User receiver not exist')
     }
 
-    const compliment = complimentsRepository.create({
+    const compliment = complimentsRepositories.create({
       tag_id,
       user_receiver,
       user_sender,

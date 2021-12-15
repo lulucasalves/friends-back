@@ -10,9 +10,9 @@ interface IUserRequest {
 
 class AuthenticateUserService {
   async execute({ email, password }: IUserRequest) {
-    const usersRepository = getCustomRepository(UsersRepositories)
+    const usersRepositories = getCustomRepository(UsersRepositories)
 
-    const user = await usersRepository.findOne({ email })
+    const user = await usersRepositories.findOne({ email })
 
     if (!user) {
       throw new Error('User not exist')

@@ -11,7 +11,7 @@ interface IUserRequest {
 
 class CreateUserService {
   async execute({ name, email, admin = false, password }: IUserRequest) {
-    const usersRepository = getCustomRepository(UsersRepositories)
+    const usersRepositories = getCustomRepository(UsersRepositories)
 
     if (!email) {
       throw new Error('Email incorreto')
@@ -19,20 +19,20 @@ class CreateUserService {
 
     const passwordHash = await hash(password, 8)
 
-    const userExist = await usersRepository.findOne({ email })
+    const userExist = await usersRepositories.findOne({ email })
 
     if (userExist) {
       throw new Error('User exist')
     }
 
-    const user = usersRepository.create({
+    const user = usersRepositories.create({
       name,
       email,
       admin,
       password: passwordHash
     })
 
-    await usersRepository.save(user)
+    await usersRepositories.save(user)
 
     return user
   }
