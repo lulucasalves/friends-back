@@ -37,6 +37,8 @@ class CreateComplimentService {
       user_sender,
       message
     })
+
+    return compliment
   }
 }
 

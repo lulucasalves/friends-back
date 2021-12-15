@@ -15,7 +15,7 @@ const router = Router()
 const createUserController = new CreateUserController()
 const createTagController = new CreateTagController()
 const authenticateUserController = new AuthenticateUserController()
-const createCommentController = new CreateComplimentController()
+const createComplimentController = new CreateComplimentController()
 const listUserSendComplimentsController =
   new ListUserSendComplimentsController()
 const listUserReceiveComplimentsController =
@@ -33,6 +33,6 @@ router.get('/users/send', listUserSendComplimentsController.handle)
 router.get('/users/receive', listUserReceiveComplimentsController.handle)
 
 router.post('/login', authenticateUserController.handle)
-router.post('/compliments', createCommentController.handle)
+router.post('/compliments', createComplimentController.handle)
 
 export { router }
