@@ -1,7 +1,7 @@
 <h1>Friends</h1>
 <p>
   Este projeto foi feito junto com a Rocketseat na trilha Node.js do evento
-  NLW-6
+  NLW-6, dentre suas funções está: criação de usuários, login acompanhado de um token, cadastro de elogios, envio e recebimento de elogios, listagem de elogios, listagem de usuários e listagem de elogios recebidos pelo usuário.
 </p>
 <img src="https://github.com/lulucasalves/friends-api-back/blob/main/.github/img.png" />
 <h1>Tecnologias útilizadas</h1>
