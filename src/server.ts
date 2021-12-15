@@ -3,10 +3,12 @@ import './database'
 import express, { NextFunction, Request, Response } from 'express'
 import { router } from './routes'
 import 'express-async-errors'
+import cors from 'cors'
 
 const app = express()
 
 app.use(express.json())
+app.use(cors())
 
 app.use(router)
 
